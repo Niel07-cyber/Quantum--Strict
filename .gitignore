@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.env
+*.sqlite3
+poetry.lock
+*.log
+.cache/
+*.DS_Store
+*.vscode/
+.mypy_cache/
+.idea/
+*.zip
+.venv/

@@ -1,101 +1,107 @@
-🧠 Quantum Knowledge Network
+# 🧠 Quantum Knowledge Network
+
 A next-generation backend architecture powered by quantum computing, AI, and decentralization. Built with FastAPI, Qiskit, and OpenAI, this project lays the foundation for an intelligent, collaborative knowledge engine.
 
-📌 What It Does
-✅ Runs quantum circuits via a FastAPI interface
+---
 
-✅ Generates responses using OpenAI GPT (AI Assistant)
+## 📌 What It Does
 
-✅ Stores & retrieves solved problems in a local SQLite DB
+- ✅ Runs quantum circuits via a FastAPI interface
+- ✅ Generates responses using OpenAI GPT (AI Assistant)
+- ✅ Stores & retrieves solved problems in a local SQLite DB
+- ✅ REST API powered by FastAPI
+- ⚙️ Modular backend: ready for semantic search, tokenization, and Web3 integration
 
-✅ REST API powered by FastAPI
+---
 
-⚙️ Modular backend: ready for semantic search, tokenization, and Web3 integration
+## ⚙️ Tech Stack
 
-⚙️ Tech Stack
-🧠 Qiskit & Qiskit Aer — quantum circuit simulation
+- 🧠 Qiskit & Qiskit Aer — quantum circuit simulation
+- 🤖 OpenAI GPT — natural language processing
+- ⚡ FastAPI — high-performance API
+- 🐍 Python 3.11 — via Poetry
+- 🌐 Uvicorn — ASGI server
+- 📦 SQLite — lightweight DB
+- 🔐 python-dotenv — environment management
 
-🤖 OpenAI GPT — natural language processing
+---
 
-⚡ FastAPI — high-performance API
+## 🚀 How to Run Locally
 
-🐍 Python 3.11 — via Poetry
+1. Clone the project:
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/quantum_strict.git
+   cd quantum_strict
+   ```
 
-🌐 Uvicorn — ASGI server
+2. Install dependencies with Poetry:
+   ```bash
+   py -3.11 -m poetry install
+   ```
 
-📦 SQLite — lightweight DB
+3. Create a .env file in the project root:
+   ```ini
+   OPENAI_API_KEY=your_openai_key_here
+   ```
 
-🔐 python-dotenv — environment management
+4. Run database migration:
+   ```bash
+   $env:PYTHONPATH="src"; poetry run python -c "from app.database import Base, engine; Base.metadata.create_all(bind=engine)"
+   ```
 
-🚀 How to Run Locally
-Clone the project:
+5. Start the server:
+   ```bash
+   $env:PYTHONPATH="src"; poetry run uvicorn app.main:app --reload
+   ```
 
-bash
-Copy
-Edit
-git clone https://github.com/YOUR_USERNAME/quantum_strict.git
-cd quantum_strict
-Install dependencies with Poetry:
+6. Open the docs:
+   http://127.0.0.1:8000/docs
 
-bash
-Copy
-Edit
-py -3.11 -m poetry install
-Create a .env file in the project root:
+---
 
-ini
-Copy
-Edit
-OPENAI_API_KEY=your_openai_key_here
-Run database migration:
+## 🔥 API Endpoints
 
-bash
-Copy
-Edit
-$env:PYTHONPATH="src"; poetry run python -c "from app.database import Base, engine; Base.metadata.create_all(bind=engine)"
-Start the server:
-
-bash
-Copy
-Edit
-$env:PYTHONPATH="src"; poetry run uvicorn app.main:app --reload
-Open the docs:
-http://127.0.0.1:8000/docs
-
-🔥 API Endpoints
-Method	Endpoint	Description
-GET	/	Health check
-POST	/solve	Solve problem using AI or quantum
-GET	/history	Retrieve problem history
+| Method | Endpoint     | Description                      |
+|--------|--------------|----------------------------------|
+| GET    | /            | Health check                     |
+| POST   | /solve       | Solve problem using AI or quantum |
+| GET    | /history     | Retrieve problem history         |
 
 Example POST /solve:
 
-json
-Copy
-Edit
+```json
 {
   "question": "What is quantum entanglement?",
   "method": "ai"
 }
-🧠 Phase 3 Complete
-✅ Quantum backend
-✅ AI + GPT integration
-✅ Persistent DB (SQLite)
+```
+
+---
+
+## 🧠 Phase 3 Complete
+
+✅ Quantum backend  
+✅ AI + GPT integration  
+✅ Persistent DB (SQLite)  
 ✅ Clean modular FastAPI layout
 
-🛠 Roadmap
-🔍 Phase 4: Semantic search using vector embeddings (e.g. Sentence-BERT)
+---
 
-🌐 Phase 5: Decentralized storage (IPFS integration)
+## 🛠 Roadmap
 
-🪙 Phase 6: Token system & reputation via smart contracts
+- 🔍 Phase 4: Semantic search using vector embeddings (e.g. Sentence-BERT)
+- 🌐 Phase 5: Decentralized storage (IPFS integration)
+- 🪙 Phase 6: Token system & reputation via smart contracts
+- 📊 Phase 7: Real-time collaboration & visualization
 
-📊 Phase 7: Real-time collaboration & visualization
+---
 
-🤝 Contributing
+## 🤝 Contributing
+
 Want to help build the future of intelligent problem-solving? Open a PR, suggest features, or file issues!
 
-📜 License
-MIT License © 2025 Othniel Aryee
+---
 
-—
+## 📜 License
+
+MIT License © 2025 Othniel Aryee

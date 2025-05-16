@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Text, DateTime
 from sqlalchemy.orm import declarative_base, sessionmaker
 from datetime import datetime
+from sqlalchemy import PickleType  # Add to imports
 
 DATABASE_URL = "sqlite:///./knowledge.db"
 
@@ -16,3 +17,4 @@ class SolvedProblem(Base):
     method = Column(String(20), nullable=False)
     answer = Column(Text, nullable=False)
     timestamp = Column(DateTime, default=datetime.utcnow)
+    embedding = Column(PickleType, nullable=True)  # ← Add this line

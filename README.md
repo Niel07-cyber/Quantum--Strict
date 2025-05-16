@@ -1,32 +1,101 @@
-# 🧠 Quantum Knowledge Network
+🧠 Quantum Knowledge Network
+A next-generation backend architecture powered by quantum computing, AI, and decentralization. Built with FastAPI, Qiskit, and OpenAI, this project lays the foundation for an intelligent, collaborative knowledge engine.
 
-A next-generation backend architecture powered by quantum computing, AI, and decentralization. Built with FastAPI and Qiskit, this project lays the foundation for an intelligent, collaborative knowledge engine.
+📌 What It Does
+✅ Runs quantum circuits via a FastAPI interface
 
----
+✅ Generates responses using OpenAI GPT (AI Assistant)
 
-## 📌 What It Does
+✅ Stores & retrieves solved problems in a local SQLite DB
 
-- Runs quantum circuits via a FastAPI interface
-- Generates real quantum outputs using Qiskit Aer
-- Serves results over a clean REST API
-- Built in a modular structure to enable future integration with AI/NLP, semantic search, and decentralized storage
+✅ REST API powered by FastAPI
 
----
+⚙️ Modular backend: ready for semantic search, tokenization, and Web3 integration
 
-## ⚙️ Tech Stack
+⚙️ Tech Stack
+🧠 Qiskit & Qiskit Aer — quantum circuit simulation
 
-- 🧠 Qiskit + Qiskit Aer
-- ⚡ FastAPI
-- 🧪 Python 3.11 (managed with Poetry)
-- 🌐 Uvicorn (ASGI server)
-- 🔐 python-dotenv for environment management
+🤖 OpenAI GPT — natural language processing
 
----
+⚡ FastAPI — high-performance API
 
-## 🚀 How to Run Locally
+🐍 Python 3.11 — via Poetry
 
-Clone the repository:
+🌐 Uvicorn — ASGI server
 
-```bash
+📦 SQLite — lightweight DB
+
+🔐 python-dotenv — environment management
+
+🚀 How to Run Locally
+Clone the project:
+
+bash
+Copy
+Edit
 git clone https://github.com/YOUR_USERNAME/quantum_strict.git
 cd quantum_strict
+Install dependencies with Poetry:
+
+bash
+Copy
+Edit
+py -3.11 -m poetry install
+Create a .env file in the project root:
+
+ini
+Copy
+Edit
+OPENAI_API_KEY=your_openai_key_here
+Run database migration:
+
+bash
+Copy
+Edit
+$env:PYTHONPATH="src"; poetry run python -c "from app.database import Base, engine; Base.metadata.create_all(bind=engine)"
+Start the server:
+
+bash
+Copy
+Edit
+$env:PYTHONPATH="src"; poetry run uvicorn app.main:app --reload
+Open the docs:
+http://127.0.0.1:8000/docs
+
+🔥 API Endpoints
+Method	Endpoint	Description
+GET	/	Health check
+POST	/solve	Solve problem using AI or quantum
+GET	/history	Retrieve problem history
+
+Example POST /solve:
+
+json
+Copy
+Edit
+{
+  "question": "What is quantum entanglement?",
+  "method": "ai"
+}
+🧠 Phase 3 Complete
+✅ Quantum backend
+✅ AI + GPT integration
+✅ Persistent DB (SQLite)
+✅ Clean modular FastAPI layout
+
+🛠 Roadmap
+🔍 Phase 4: Semantic search using vector embeddings (e.g. Sentence-BERT)
+
+🌐 Phase 5: Decentralized storage (IPFS integration)
+
+🪙 Phase 6: Token system & reputation via smart contracts
+
+📊 Phase 7: Real-time collaboration & visualization
+
+🤝 Contributing
+Want to help build the future of intelligent problem-solving? Open a PR, suggest features, or file issues!
+
+📜 License
+MIT License © 2025 Othniel Aryee
+
+—

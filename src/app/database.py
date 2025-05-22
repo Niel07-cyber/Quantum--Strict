@@ -18,3 +18,4 @@ class SolvedProblem(Base):
     answer = Column(Text, nullable=False)
     timestamp = Column(DateTime, default=datetime.utcnow)
     embedding = Column(PickleType, nullable=True)  # ← Add this line
+    cid       = Column(String, nullable=True)  # IPFS content ID

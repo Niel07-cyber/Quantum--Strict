@@ -1,0 +1,54 @@
+/* basic styling */
+
+body {
+  font-family: sans-serif;
+  margin: 2rem;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.solve-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.solve-form input,
+.solve-form select,
+.solve-form button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.live-section,
+.history-section {
+  margin-top: 2rem;
+}
+
+.live-section ul,
+.history-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.live-section li,
+.history-section li {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.5rem;
+}
+
+.live-section pre {
+  background: #f5f5f5;
+  padding: 0.5rem;
+  overflow-x: auto;
+}
+
+small {
+  display: block;
+  color: #666;
+  margin-top: 0.25rem;
+}
